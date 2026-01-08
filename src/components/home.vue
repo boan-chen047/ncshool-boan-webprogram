@@ -41,7 +41,7 @@ const news = [
             <div class="topic">熱門消息：</div>
             <ul class="newsgroup">
                 <li v-for="message in news" :key="message.id" class="newsblog">
-                    <a href="{{ message.news }}" class="newsname"></a>
+                    <a :href="message.news" class="newsname">message.name</a>
                 </li>
             </ul>
         </div>

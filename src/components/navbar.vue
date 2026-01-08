@@ -116,7 +116,7 @@
                     display: grid;
                 }
             }
-            .logout{}
+            
         }
         .dropmenu{
             position: relative;
