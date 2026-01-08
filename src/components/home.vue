@@ -13,11 +13,11 @@
 ];
 
 const news = [
-  { id: 1, name: '消息一', icon: '/icon.png' },
-  { id: 2, name: '消息二', icon: '/icon.png' },
-  { id: 3, name: '消息三', icon: '/icon.png' },
-  { id: 4, name: '消息四', icon: '/icon.png' },
-  { id: 5, name: '消息五', icon: '/icon.png' },
+  { id: 1, name: '消息一', news: '#' },
+  { id: 2, name: '消息二', news: '#' },
+  { id: 3, name: '消息三', news: '#' },
+  { id: 4, name: '消息四', news: '#' },
+  { id: 5, name: '消息五', news: '#' },
 ];
 </script>
 
@@ -41,7 +41,7 @@ const news = [
             <div class="topic">熱門消息：</div>
             <ul class="newsgroup">
                 <li v-for="message in news" :key="message.id" class="newsblog">
-                    <div class="newsname">{{ message.name }}</div>
+                    <a href="{{ message.news }}" class="newsname"></a>
                 </li>
             </ul>
         </div>
