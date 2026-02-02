@@ -34,3 +34,8 @@ coverage
 
 # Vitest
 __screenshots__/
+
+# 環境變數檔案
+.env
+.env.*
+!.env.example

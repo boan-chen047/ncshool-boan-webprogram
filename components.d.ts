@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Button: typeof import('./src/components/ui/button/Button.vue')['default']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
