@@ -1,26 +1,24 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import home from '../components/home.vue';
-import game from '../components/game.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+// 使用 @ 符號確保路徑指向 src
+import Home from '@/components/home.vue'
+import Game from '@/components/game.vue'
+
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: home
+    component: Home
   },
   {
     path: '/game',
     name: 'Game',
-    component: game
-  },
-  { 
-    path: '/:pathMatch(.*)*', 
-    component: { template: '<div>404 找不到頁面 - 路由地圖可能沒讀到</div>' } 
+    component: Game
   }
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: routes,
+  routes
 })
 
 export default router

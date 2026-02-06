@@ -3,9 +3,11 @@
   
 </script>
 
-<template>
-  <Nav></Nav>
-  <router-view></router-view>
+<template >
+  <div class="min-h-screen bg-slate-900 text-white font-sans antialiased">
+      <Nav />
+      <router-view />
+  </div>
 </template>
 
 <style scoped>

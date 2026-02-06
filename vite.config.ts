@@ -27,4 +27,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    open: 'chrome', // 自動在 Chrome 中打開
+    host: true, // 允許外部訪問
+  },
 })
