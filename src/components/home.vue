@@ -33,12 +33,12 @@ const plugin = Autoplay({
 
 <template>
     <main>
-        <div class="text-4xl font-bold mb-6 border-l-8 border-red-400 pl-4">熱門遊戲:</div>
+        <div class="text-4xl font-bold mb-6 border-l-8 border-red-400 pl-4 translate-x-35 !mt-4">熱門遊戲:</div>
         <div class="flex w-full justify-center py-12">
             
 
             <Carousel
-                class="w-full max-w-3xl  px-10"
+                class="w-full max-w-3xl  px-10 !mt-4"
                 :plugins="[ plugin]"
                 :opts="{
                 align: 'start',
@@ -67,15 +67,15 @@ const plugin = Autoplay({
                 </Carousel>
                 </div>
 
-        <div class="news w-full max-w-3xl mx-auto px-10 mt-12 mb-20">
-            <div class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4">
+        <div class="news w-full max-w-4xl mx-auto px-10 mt-12 mb-20">
+            <div class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4">
             熱門消息：
             </div>
 
-            <ul class="flex flex-col gap-4 text-cen">
-                <li v-for="message in news" :key="message.id" class="w-full ">
+            <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
+                <li v-for="message in news" :key="message.id" class="w-full !mb-8 ">
                     <a :href="message.news" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
-                        <span class="mr-4 text-yellow-500">📢</span>
+                        <span class="text-2xl !pt-2 !pb-2 !pl-2">📢</span>
                         {{message.name}}
                     </a>
                 </li>
@@ -85,90 +85,5 @@ const plugin = Autoplay({
 </template>
 
 <style lang="scss" scoped>
-    // .ad{
-    //     min-height: 100px;
-    // }
-    // .games{
-    //     min-height: 800px;
-    //     width: 100%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     background-color: lightblue;
-    //     padding: 50px 30px;
-    //     .topic{
-    //         font-size: 50px;
-    //         padding: 0 0 20px 0
-    //     }
-    //     .gamegroup {
-    //         display: grid;
-    //         grid-template-columns: repeat(5, 1fr); 
-    //         grid-template-rows: repeat(2, 1fr);
-    //         flex: 1;
-    //         list-style: none;
-    //         padding: 0;
-    //         gap: 20px;
-
-    //         .gameblog{
-    //             align-items: center;  
-    //             justify-content: space-evenly;
-    //             height: 100%;
-    //             width: 100%;
-    //             .imgcontainer {
-    //                 width: 100%;         
-    //                 height: 80%;
-    //                 overflow: hidden;
-    //                 .game_picture {
-    //                     width: 100%;
-    //                     height: 100%;
-    //                     object-fit: contain; 
-    //                 }
-    //             }
-    //             .gamename{
-    //                 height: 20%;
-    //                 width: 100%;
-    //                 align-items: center;    
-    //                 padding-top: 10px;
-    //                 display: flex;         
-    //                 justify-content: center; 
-    //                 align-items: flex-start; 
-    //             }
-    //         }
-    //     }
-    // }
-    
-    // .news{
-    //     min-height: 600px;
-    //     width: 100%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     background-color: lightgreen;
-    //     padding: 50px 30px;
-    //     .topic{
-    //         font-size: 50px;
-    //         padding: 0 0 20px 0
-    //     }
-    //     .newsgroup {
-    //         display: grid;
-    //         grid-template-rows: repeat(5, 1fr);
-    //         flex: 1;
-    //         list-style: none;
-    //         padding: 0;
-    //         gap: 10px;
-    //         .newsblog{
-    //             align-items: center;    /* 水平置中 */
-    //             justify-content: flex-start;
-    //             height: 100%;
-    //             width: 100%;
-    //             .newsname{
-    //                 height: 100%;
-    //                 width: 100%;
-    //                 align-items: center;    /* 水平置中 */
-    //                 padding-top: 10px;
-    //                 display: flex;         /* 使用 Flexbox 控制內部文字 */
-    //                 justify-content: flex-start; /* 1. 水平置中 */
-    //                 font-size: 25px;
-    //             }
-    //         }
-    //     }
-    // }
+   
 </style>
