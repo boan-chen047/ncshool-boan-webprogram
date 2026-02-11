@@ -23,6 +23,7 @@ declare module 'vue' {
     CarouselItem: typeof import('./src/components/ui/carousel/CarouselItem.vue')['default']
     CarouselNext: typeof import('./src/components/ui/carousel/CarouselNext.vue')['default']
     CarouselPrevious: typeof import('./src/components/ui/carousel/CarouselPrevious.vue')['default']
+    copy: typeof import('./src/components/navbar copy.vue')['default']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']

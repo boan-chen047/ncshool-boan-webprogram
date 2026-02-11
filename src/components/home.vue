@@ -1,33 +1,28 @@
 <script setup lang="ts">
-import { Card, CardContent } from '@/components/ui/card'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import Autoplay from 'embla-carousel-autoplay'
+    import { Card, CardContent } from '@/components/ui/card'
+    import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+    import Autoplay from 'embla-carousel-autoplay'
+    import { ref, onMounted } from 'vue';
+    import { useGames } from '../Composable/usegames';
 
-const games = [
-  { id: 1, name: '遊戲一', icon: '/icon.png' },
-  { id: 2, name: '遊戲二', icon: '/icon.png' },
-  { id: 3, name: '遊戲三', icon: '/icon.png' },
-  { id: 4, name: '遊戲四', icon: '/icon.png' },
-  { id: 5, name: '遊戲五', icon: '/icon.png' },
-  { id: 6, name: '遊戲六', icon: '/icon.png' },
-  { id: 7, name: '遊戲七', icon: '/icon.png' },
-  { id: 8, name: '遊戲八', icon: '/icon.png' },
-  { id: 9, name: '遊戲九', icon: '/icon.png' },
-  { id: 10, name: '遊戲十', icon: '/icon.png' },
-];
+    const { games, fetchGames } = useGames();
+    
+    onMounted(() => {
+        fetchGames();
+    });
 
-const news = [
-  { id: 1, name: '消息一', news: '#' },
-  { id: 2, name: '消息二', news: '#' },
-  { id: 3, name: '消息三', news: '#' },
-  { id: 4, name: '消息四', news: '#' },
-  { id: 5, name: '消息五', news: '#' },
-];
+    const news = [
+    { id: 1, name: '消息一', news: '#' },
+    { id: 2, name: '消息二', news: '#' },
+    { id: 3, name: '消息三', news: '#' },
+    { id: 4, name: '消息四', news: '#' },
+    { id: 5, name: '消息五', news: '#' },
+    ];
 
-const plugin = Autoplay({
-  delay: 3000, // 3000ms = 3秒換下一張
-  stopOnInteraction: false, // 手指滑動後，要不要停止自動播放？(false = 繼續自動播)
-})
+    const plugin = Autoplay({
+    delay: 3000, // 3000ms = 3秒換下一張
+    stopOnInteraction: false, // 手指滑動後，要不要停止自動播放？(false = 繼續自動播)
+    })
 
 </script>
 
@@ -47,17 +42,19 @@ const plugin = Autoplay({
                 @mouseenter="plugin.stop"
                 @mouseleave="plugin.reset"
             >
-                    <CarouselContent class="!-ml-4">
+                <CarouselContent class="!-ml-4">
                     <CarouselItem v-for="game in games" :key="game.id" class="!px-4 md:basis-1/2 lg:basis-1/3">
+                    <router-link :to="`/game/${game.docId}`" class="cursor-pointer block">
                         <div class="p-3 bg-transparent">
                         <Card class="bg-white/10 border-none rounded-3xl overflow-hidden shadow-lg h-full">
-                            <CardContent class="flex flex-col items-center justify-center gap-4 p-6 pt-6 pb-2 h-full bg-transparent">
+                            <CardContent class="flex flex-col items-center justify-center  h-full bg-transparent">
                             <!-- <span class="text-2xl font-semibold">{{ game.name }}</span> -->
-                                <img src="/icon.png" class="w-32 h-48 object-contain drop-shadow-lg transition-transform duration-500 hover:scale-110 rounded-3xl overflow-hidden">
-                                <span class=" text-4xl font-bold tracking-wider ">{{ game.name }}</span>
+                                <img :src="game.imageurl" class="w-full h-56 object-contain drop-shadow-lg transition-transform duration-500 hover:scale-110 rounded-3xl overflow-hidden">
+                                <span class=" text-lg font-bold tracking-wider text-center text-white !whitespace-nowrap !mb-4">{{ game.id }}</span>
                             </CardContent>
                         </Card>
                         </div>
+                    </router-link>
                     </CarouselItem>
                     </CarouselContent>
 
