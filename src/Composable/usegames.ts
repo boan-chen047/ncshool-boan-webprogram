@@ -1,6 +1,6 @@
 // test1/src/Composable/useGames.ts
 import { ref } from 'vue';
-import { db } from '../asset/firebase';
+import { db } from '../components/firebase/firebase';
 import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
 
 const games = ref<any[]>([]);
@@ -18,12 +18,6 @@ export function useGames() {
             console.error("無法取得遊戲列表：", error);
         }
     };
-
-    return {
-        games,
-        fetchGames
-    };
-
     const fetchGameById = async (id: string) => {
         try {
             const docRef = doc(db, "game", id);

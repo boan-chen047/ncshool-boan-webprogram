@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // 使用 @ 符號確保路徑指向 src
-import Home from '@/components/home.vue'
-import Game from '@/components/game.vue'
+import Home from '@/view/home.vue'
 
 const routes = [
   {
@@ -12,7 +11,7 @@ const routes = [
   {
     path: '/game/:id', 
     name: 'GameDetail',
-    component: () => import('@/components/game.vue') 
+    component: () => import('@/view/game.vue') 
   }
 ]
 

@@ -1,6 +1,6 @@
 // test1/src/Composable/useAuth.ts
 import { ref } from 'vue';
-import { auth, googleProvider } from '../asset/firebase'; 
+import { auth, googleProvider } from '../components/firebase/firebase'; 
 import { onAuthStateChanged, signInWithPopup, signOut, type User } from 'firebase/auth';
 
 const user = ref<User | null>(null);
