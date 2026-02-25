@@ -1,7 +1,7 @@
 ## 遊戲論壇 (Game Forum)
 這是一個使用 Vue 3、Vite 與 Firebase 打造的遊戲論壇專案。專注於高效能的資料讀取與直覺的 UI 互動體驗，並採用 Tailwind CSS 4.0 進行開發。
 
-作品亮點
+# 作品亮點
   Vue 3 Composition API：使用 setup 語法糖與 Composable 邏輯封裝，提升程式碼重用性。
   Firebase 實時整合：
     Firestore：實現動態遊戲列表與詳情頁的異步資料抓取。
