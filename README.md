@@ -2,29 +2,30 @@
 這是一個使用 Vue 3、Vite 與 Firebase 打造的遊戲論壇專案。專注於資料讀取與 UI 互動體驗，採用 Tailwind CSS 4.0 進行開發。
 
 ### 作品亮點
-  * **Vue 3 Composition API**：使用 setup 語法與邏輯封裝，提升程式碼重用性。
-  * Firebase 實時整合：
+  * **Vue 3 Composition API：**使用 setup 語法與邏輯封裝，提升程式碼重用性。
+  * **Firebase 實時整合：**
     * Firestore：實現動態遊戲列表與詳情頁的異步資料抓取。
     * Authentication：整合 Google 與 Email 登入系統，並動態管理使用者狀態。
-  * 現代化 UI ：
+  * **現代化 UI ：**
     * 使用 Shadcn UI (Radix UI) 打造流暢的導覽選單與卡片系統。
     * 整合 Embla Carousel 實現具備自動播放與懸停暫停功能的遊戲輪播。
 
 ### 技術
 本專案採用以下技術開發：
-  * 核心框架：Vue 3 (Composition API)
-  * 構建工具：Vite 7
-  * 程式語言：TypeScript
-  * 後端服務：Firebase (Firestore & Authentication)
-  * 樣式處理：Tailwind CSS 4.0
-  * UI 元件庫：Shadcn UI (包含 Carousel, Navigation Menu, Card 等元件)
-  * 外部工具：VueUse, Lucide-Vue-Next
+  * **核心框架：**Vue 3 (Composition API)
+  * **構建工具：**Vite 7
+  * **程式語言：**TypeScript
+  * **後端服務：**Firebase (Firestore & Authentication)
+  * **樣式處理：**Tailwind CSS 4.0
+  * **UI 元件庫：**Shadcn UI (包含 Carousel, Navigation Menu, Card 等元件)
+  * **外部工具：**VueUse, Lucide-Vue-Next
 
 專案核心架構
-  * src/Composable/：封裝 Firebase 交互邏輯 (useGames, useAuth)。
-  * src/view/：包含首頁 (home.vue)、詳情頁 (game.vue) 與導覽列 (navbar.vue)。
-  * src/components/ui/：封裝基於 Radix UI 的原子化 UI 元件。
+  * **src/Composable/：**封裝 Firebase 交互邏輯 (useGames, useAuth)。
+  * **src/view/：**包含首頁 (home.vue)、詳情頁 (game.vue) 與導覽列 (navbar.vue)。
+  * **src/components/ui/：**封裝基於 Radix UI 的原子化 UI 元件。
   
+```text
 src/
 ├── Composable/      # 業務邏輯封裝 (Firebase 資料交互)
 ├── components/
