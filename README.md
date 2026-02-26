@@ -39,7 +39,7 @@ src/
 ### 如何在本地運行
 **複製專案:** 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/boan-chen047/ncshool-boan-webprogram.git
 ```
 
 **安裝依賴:** 請確保環境符合專案要求的 Node.js 版本（^20.19.0 或 >=22.12.0
