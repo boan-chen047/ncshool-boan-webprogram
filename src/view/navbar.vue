@@ -12,8 +12,8 @@
             navigationMenuTriggerStyle,
             NavigationMenuViewport,
             } from '@/components/ui/navigation-menu'
-    import { useAuth } from '../Composable/useauth';
-    import { useGames } from '../Composable/usegames';
+    import { useAuth } from '../composable/useauth';
+    import { useGames } from '../composable/usegames';
     
     const { user, login, logout } = useAuth(); 
     const { games, fetchGames } = useGames();

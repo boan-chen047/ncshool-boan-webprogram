@@ -1,17 +1,29 @@
 <script setup lang="ts">
     import { ref, onMounted, watch} from 'vue';
     import { useRoute } from 'vue-router';
-    import { useGames } from '../Composable/usegames';
+    import { useGames } from '../composable/usegames';
+    import { useNews } from '../composable/usenews';
+
     
     const route = useRoute();
     const { games, fetchGameById } = useGames();
+    const { news, fetchNews } = useNews();
     const gameData = ref<any>(null);
 
     const loadGame = async (id: string) => {
     if (id) {
         gameData.value = await fetchGameById(id);
+        await fetchNews(id);
     }
     };
+    
+
+    onMounted(async () => {
+        // const id = route.params.id as string;
+        // gameData.value = await fetchGameById(id);
+        loadGame(route.params.id as string);
+    });
+
     watch(
         () => route.params.id,
         (newId) => {
@@ -19,20 +31,13 @@
         }
     );
 
-    onMounted(async () => {
-        const id = route.params.id as string;
-        gameData.value = await fetchGameById(id);
-        loadGame(route.params.id as string);
-    });
-
-    
-    const news = [
-    { id: 1, name: '消息一', news: '#' },
-    { id: 2, name: '消息二', news: '#' },
-    { id: 3, name: '消息三', news: '#' },
-    { id: 4, name: '消息四', news: '#' },
-    { id: 5, name: '消息五', news: '#' },
-    ];
+    // const news = [
+    // { id: 1, name: '消息一', news: '#' },
+    // { id: 2, name: '消息二', news: '#' },
+    // { id: 3, name: '消息三', news: '#' },
+    // { id: 4, name: '消息四', news: '#' },
+    // { id: 5, name: '消息五', news: '#' },
+    // ];
 </script>
 
 <template>
@@ -47,10 +52,13 @@
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
                 <li v-for="message in news" :key="message.id" class="w-full !mb-8 ">
-                    <a :href="message.news" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
+                    <!-- <a :href="message.news" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
                         <span class="text-2xl !pt-2 !pb-2 !pl-2">📢</span>
                         {{message.name}}
-                    </a>
+                    </a> -->
+                    <router-link :to="`/game/${message.gameId}/news/${message.newsid}`">
+            📢          {{ message.name }}
+                    </router-link>
                 </li>
             </ul>
         </div>

@@ -7,7 +7,7 @@ const games = ref<any[]>([]);
 
 export function useGames() {
     const fetchGames = async () => {
-        if (games.value.length > 0) return; // 如果已經有資料就不重複抓取
+        if (games.value.length > 0) return; 
         try {
             const querySnapshot = await getDocs(collection(db, "game"));
             games.value = querySnapshot.docs.map(doc => ({

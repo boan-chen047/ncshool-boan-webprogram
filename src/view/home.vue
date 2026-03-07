@@ -3,21 +3,24 @@
     import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
     import Autoplay from 'embla-carousel-autoplay'
     import { ref, onMounted } from 'vue';
-    import { useGames } from '../Composable/usegames';
+    import { useGames } from '../composable/usegames';
+    import { useNews } from '../composable/usenews';
 
     const { games, fetchGames } = useGames();
+    const { news, fetchNews } = useNews();
     
     onMounted(() => {
         fetchGames();
+        fetchNews();
     });
 
-    const news = [
-    { id: 1, name: '消息一', news: '#' },
-    { id: 2, name: '消息二', news: '#' },
-    { id: 3, name: '消息三', news: '#' },
-    { id: 4, name: '消息四', news: '#' },
-    { id: 5, name: '消息五', news: '#' },
-    ];
+    // const news = [
+    // { id: 1, name: '消息一', news: '#' },
+    // { id: 2, name: '消息二', news: '#' },
+    // { id: 3, name: '消息三', news: '#' },
+    // { id: 4, name: '消息四', news: '#' },
+    // { id: 5, name: '消息五', news: '#' },
+    // ];
 
     const plugin = Autoplay({
     delay: 3000, // 3000ms = 3秒換下一張
@@ -70,11 +73,12 @@
             </div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
-                <li v-for="message in news" :key="message.id" class="w-full !mb-8 ">
-                    <a :href="message.news" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
-                        <span class="text-2xl !pt-2 !pb-2 !pl-2">📢</span>
-                        {{message.name}}
-                    </a>
+                <li v-for="message in news" :key="message.newsId" class="w-full !mb-8 ">
+                    <!-- <a :href="message.news" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
+                    </a> -->
+                    <router-link :to="`/game/${message.gameId}/news/${message.newsId}`"  class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
+                    <span class="text-2xl !pt-2 !pb-2 !pl-2">📢</span>{{ message.name }}
+                    </router-link>
                 </li>
             </ul>
         </div>

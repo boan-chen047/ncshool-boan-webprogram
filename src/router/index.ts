@@ -12,6 +12,11 @@ const routes = [
     path: '/game/:id', 
     name: 'GameDetail',
     component: () => import('@/view/game.vue') 
+  },
+  {
+    path: '/game/:gameId/news/:newsId', // 具體的消息內頁
+    name: 'NewsDetail',
+    component: () => import('@/view/news.vue') // 你需要建立這個組件
   }
 ]
 
