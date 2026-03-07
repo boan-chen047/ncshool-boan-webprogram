@@ -1,13 +1,13 @@
-import * as functions from "firebase-functions";
+import { onSchedule } from "firebase-functions/v2/scheduler";
 import * as admin from "firebase-admin";
 import axios from "axios";
 
-// 初始化 Firebase Admin，不需要放金鑰，它在雲端會自動取得權限
+// 初始化 Firebase Admin
 admin.initializeApp();
 const db = admin.firestore();
 
-// 設定排程：每 2 小時執行一次
-export const fetchSteamNews = functions.pubsub.schedule("every 2 hours").onRun(async (context) => {
+// 💡 這裡改用了 v2 的 onSchedule 寫法，並且把沒用到的 event 參數省略了
+export const fetchSteamNews = onSchedule("every 8 hours", async () => {
     try {
         console.log("開始執行 Steam 新聞抓取作業...");
         
@@ -51,10 +51,8 @@ export const fetchSteamNews = functions.pubsub.schedule("every 2 hours").onRun(a
             }
         }
         console.log("🎉 所有遊戲新聞更新完畢！");
-        return null; 
         
     } catch (error) {
         console.error("抓取過程中發生錯誤：", error);
-        return null;
     }
 });
