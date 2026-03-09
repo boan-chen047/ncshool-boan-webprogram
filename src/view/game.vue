@@ -34,7 +34,7 @@
 </script>
 
 <template>
-    <div v-if="gameData"  class="!px-4 md:basis-1/2 lg:basis-1/3">
+    <div v-if="gameData"  class="px-4! md:basis-1/2 lg:basis-1/3">
         <img :src="gameData.imageurl" class="w-full h-auto max-w-xl !mx-auto object-contain drop-shadow-2xl transition-transform duration-100 hover:scale-105 rounded-3xl overflow-hidden">
     </div>
 
@@ -44,7 +44,7 @@
             </div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
-                <li v-for="message in news" :key="message.newsId" class="block w-full bg-white/5 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-4 !p-4"">
+                <li v-for="message in news" :key="message.newsId" class=" w-full bg-white/5 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-4 !p-4"">
                     <span class=" ">📢</span>
                     <Button variant="outline" class="uppercase font-bold tracking-wider text-black transition-colors !p-4  !bg-white/20 hover:!bg-white/80 cursor-pointer !mr-2 !ml-2">
                             # {{ message.gameId }}

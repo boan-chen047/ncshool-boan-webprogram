@@ -83,11 +83,11 @@
             <template v-else>
             <div class="flex items-center gap-2">
                 <router-link
-                        to=""
+                        to="/user"
                         class="!mr-2 !ml-2 z-10"
                         @click.stop
                 >
-                    <span class="text-sm font-medium !p-4">{{ user.displayName }}</span>
+                    <Button variant="outline" class="bg-transparent border-none text-sm font-medium uppercase  tracking-wider text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 cursor-pointer !p-4">{{ user.displayName }}</Button variant="outline">
                 </router-link>
                 
                 <Button variant="ghost" size="sm" @click="logout " class="!p-4 !mr-4">登出</Button>

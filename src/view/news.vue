@@ -21,7 +21,7 @@
           </div>
 
           <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
-                <li v-for="message in news" :key="message.newsId" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-6 !p-4">
+                <li v-for="message in news" :key="message.newsId" class=" w-full bg-white/5 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-6 !p-4">
                     <span>📢</span>
                     <router-link
                         :to="`/game/${message.gameId}`"
