@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import { ref, onMounted } from 'vue';
-    import { Button } from "@/components/ui/button"
+    import { Button } from "@/components/ui/button";
     import {
             NavigationMenu,
             NavigationMenuContent,
@@ -56,19 +56,19 @@
                         </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                <!-- <NavigationMenuItem>
                     <NavigationMenuLink as-child class="bg-transparent text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !p-4" >
                         <a href="#" :class="navigationMenuTriggerStyle()">
                         討論區
                         </a>
                     </NavigationMenuLink>
-                </NavigationMenuItem>
+                </NavigationMenuItem> -->
 
                 <NavigationMenuItem>
                     <NavigationMenuLink as-child class="bg-transparent text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !p-4">
-                        <a href="#" :class="navigationMenuTriggerStyle()">
+                        <router-link to="/news" :class="navigationMenuTriggerStyle()"> 
                         最新消息
-                        </a>
+                        </router-link >
                     </NavigationMenuLink>
                 </NavigationMenuItem>
 
@@ -82,7 +82,14 @@
             </template>
             <template v-else>
             <div class="flex items-center gap-2">
-                <span class="text-sm font-medium !p-4">{{ user.displayName }}</span>
+                <router-link
+                        to=""
+                        class="!mr-2 !ml-2 z-10"
+                        @click.stop
+                >
+                    <span class="text-sm font-medium !p-4">{{ user.displayName }}</span>
+                </router-link>
+                
                 <Button variant="ghost" size="sm" @click="logout " class="!p-4 !mr-4">登出</Button>
             </div>
             </template>

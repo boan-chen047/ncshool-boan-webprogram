@@ -3,6 +3,7 @@
     import { useRoute } from 'vue-router';
     import { useGames } from '../composable/usegames';
     import { useNews } from '../composable/usenews';
+    import { Button } from '@/components/ui/button'
 
     
     const route = useRoute();
@@ -30,14 +31,6 @@
             loadGame(newId as string);
         }
     );
-
-    // const news = [
-    // { id: 1, name: '消息一', news: '#' },
-    // { id: 2, name: '消息二', news: '#' },
-    // { id: 3, name: '消息三', news: '#' },
-    // { id: 4, name: '消息四', news: '#' },
-    // { id: 5, name: '消息五', news: '#' },
-    // ];
 </script>
 
 <template>
@@ -51,17 +44,20 @@
             </div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
-                <li v-for="message in news" :key="message.id" class="w-full !mb-8 ">
-                    <!-- <a :href="message.news" class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center">
-                        <span class="text-2xl !pt-2 !pb-2 !pl-2">📢</span>
-                        {{message.name}}
-                    </a> -->
-                    <router-link :to="`/game/${message.gameId}/news/${message.newsid}`">
-            📢          {{ message.name }}
-                    </router-link>
+                <li v-for="message in news" :key="message.newsId" class="block w-full bg-white/5 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-4 !p-4"">
+                    <span class=" ">📢</span>
+                    <Button variant="outline" class="uppercase font-bold tracking-wider text-black transition-colors !p-4  !bg-white/20 hover:!bg-white/80 cursor-pointer !mr-2 !ml-2">
+                            # {{ message.gameId }}
+                    </Button>
+                    <a :href="message.url" target="_blank" >
+                        {{ message.title }}
+                    </a>
+                    <!-- <router-link :to="`/game/${message.gameId}/news/${message.newsId}`"  class="block w-full bg-white/5 p-4 rounded-xl text-xl hover:bg-white/20 hover:text-yellow-300 transition-all flex items-center"> -->
+                    
+                    <!-- </router-link> -->
                 </li>
             </ul>
-        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>

@@ -23,14 +23,9 @@ export function useNews() {
                 q = query(
                     collection(db, "news"), 
                     orderBy("date", "desc"), 
-                    limit(10)
+                    limit(25)
                 );
             }
-            // let  q = query(
-            //     collection(db, "news"), 
-            //     orderBy("timestamp", "desc"), 
-            //     limit(10)
-            // );
             
             const querySnapshot = await getDocs(q);
             

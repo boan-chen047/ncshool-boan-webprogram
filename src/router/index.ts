@@ -14,10 +14,16 @@ const routes = [
     component: () => import('@/view/game.vue') 
   },
   {
-    path: '/game/:gameId/news/:newsId', // 具體的消息內頁
-    name: 'NewsDetail',
-    component: () => import('@/view/news.vue') // 你需要建立這個組件
-  }
+    path: '/news', 
+    name: 'news',
+    component: () => import('@/view/news.vue') 
+  },
+  {
+    path: '/news', 
+    name: 'news',
+    component: () => import('@/view/news.vue') 
+  },
+  
 ]
 
 const router = createRouter({
