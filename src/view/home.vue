@@ -3,8 +3,8 @@
     import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
     import Autoplay from 'embla-carousel-autoplay'
     import { ref, onMounted } from 'vue';
-    import { useGames } from '../composable/usegames';
-    import { useNews } from '../composable/usenews';
+    import { useGames } from '../bb/usegames';
+    import { useNews } from '../bb/usenews';
     import { Button } from '@/components/ui/button';
     import type router from '@/router';
 

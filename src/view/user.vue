@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { useAuth } from '../composable/useauth';
+    import { useAuth } from '../bb/useauth';
     
     // 直接把 useAuth 裡面的 user 狀態和登出、登入功能拿出來用
     const { user, login, logout } = useAuth();

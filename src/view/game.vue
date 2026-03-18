@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import { ref, onMounted, watch} from 'vue';
     import { useRoute } from 'vue-router';
-    import { useGames } from '../composable/usegames';
-    import { useNews } from '../composable/usenews';
+    import { useGames } from '../bb/usegames';
+    import { useNews } from '../bb/usenews';
     import { Button } from '@/components/ui/button'
 
     
