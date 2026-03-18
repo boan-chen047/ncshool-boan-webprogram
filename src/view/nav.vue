@@ -35,7 +35,7 @@
             <NavigationMenuList class="gap-x-10">
                 
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger class="bg-transparent text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !p-4">熱門遊戲</NavigationMenuTrigger>
+                    <NavigationMenuTrigger class="bg-transparent text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !p-4">Popular Games</NavigationMenuTrigger>
                         <NavigationMenuContent class=" !bg-transparent  hover:bg-white/40  focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20">
                             <ul class="grid w-[400px] gap-3 !p-4  md:w-[500px] md:grid-cols-2 lg:w-[600px] !bg-transparent  hover:bg-white/40  focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20">
                                 <li v-for="game in games" :key="game.docId" class="!p-2">
@@ -47,7 +47,7 @@
                                             <div class="text-sm font-bold leading-none !pt-1 !ml-1" >{{ game.id }}</div>
                                             
                                             <p class="line-clamp-2 text-sm leading-snug text-zinc-600 !ml-1">
-                                                點擊查看遊戲詳情
+                                                More details
                                             </p>
                                         </router-link>
                                     </NavigationMenuLink>
@@ -67,7 +67,7 @@
                 <NavigationMenuItem>
                     <NavigationMenuLink as-child class="bg-transparent text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !p-4">
                         <router-link to="/news" :class="navigationMenuTriggerStyle()"> 
-                        最新消息
+                        News
                         </router-link >
                     </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -78,7 +78,7 @@
 
         <div class="flex items-center gap-4  ">
             <template v-if="!user">
-                <Button variant="outline" class="w-18 bg-transparent border-none text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !mr-12" @click="login">登入</Button>
+                <Button variant="outline" class="w-18 bg-transparent border-none text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 !mr-12" @click="login">Login</Button>
             </template>
             <template v-else>
             <div class="flex items-center gap-2">
@@ -90,7 +90,7 @@
                     <Button variant="outline" class="bg-transparent border-none text-sm font-medium uppercase  tracking-wider text-white hover:bg-white/20 hover:text-white focus:bg-white/20 data-[active]:bg-white/20 data-[state=open]:bg-white/20 cursor-pointer !p-4">{{ user.displayName }}</Button variant="outline">
                 </router-link>
                 
-                <Button variant="ghost" size="sm" @click="logout " class="!p-4 !mr-4">登出</Button>
+                <Button variant="ghost" size="sm" @click="logout " class="!p-4 !mr-4">Logout</Button>
             </div>
             </template>
 

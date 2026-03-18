@@ -40,7 +40,7 @@
 
     <div class="news w-full max-w-4xl mx-auto px-10 mt-12 mb-20">
             <div class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4">
-            熱門消息：
+            News：
             </div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">

@@ -24,7 +24,7 @@
 
 <template>
     <main>
-        <div class="text-4xl font-bold mb-6 border-l-8 border-red-400 pl-4 translate-x-35 !mt-4">熱門遊戲:</div>
+        <div class="text-4xl font-bold mb-6 border-l-8 border-red-400 pl-4 translate-x-35 !mt-4">Popular Games:</div>
         <div class="flex w-full justify-center py-12">
             <Carousel
                 class="w-full max-w-3xl  px-10 !mt-4"
@@ -60,7 +60,7 @@
 
         <div class="news w-full max-w-4xl mx-auto !pb-10 ">
             <div class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4">
-            熱門消息：
+            News：
             </div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">

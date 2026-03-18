@@ -18,14 +18,14 @@
 
         <div class="user-info w-full max-w-4xl mx-auto pb-10!">
             <div class="text-4xl font-bold  border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4 !mb-6">
-                個人資訊：
+                User info：
             </div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
                 <li class="w-full !mb-6 ">
                     <div class="w-full bg-white/5 p-6 rounded-xl text-xl hover:bg-white/10 transition-all flex items-center border border-white/5 shadow-sm !p-2">
                         <span class="text-3xl !mr-4">📛</span>
-                        <span class="font-bold text-yellow-300 w-32 tracking-wider">顯示名稱：</span>
+                        <span class="font-bold text-yellow-300 w-32 tracking-wider">Name：</span>
                         <span class="text-gray-200">{{ user.displayName }}</span>
                     </div>
                 </li>
@@ -33,7 +33,7 @@
                 <li class="w-full !mb-6">
                     <div class=" w-full bg-white/5 p-6 rounded-xl text-xl hover:bg-white/10 transition-all flex items-center border border-white/5 shadow-sm !p-2">
                         <span class="text-3xl !mr-4">📧</span>
-                        <span class="font-bold text-yellow-300 w-32 tracking-wider">電子信箱：</span>
+                        <span class="font-bold text-yellow-300 w-32 tracking-wider">Email：</span>
                         <span class="text-gray-200">{{ user.email }}</span>
                     </div>
                 </li>

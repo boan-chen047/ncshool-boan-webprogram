@@ -13,11 +13,11 @@
   <template>
       <main class="w-full max-w-4xl mx-auto !pb-10 !pt-6">
           <div class="text-4xl font-bold  border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4 !mb-8">
-              📰 最新消息：
+              📰 News：
           </div>
 
           <div v-if="news.length === 0" class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4">
-              讀取中...
+              Loading...
           </div>
 
           <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
