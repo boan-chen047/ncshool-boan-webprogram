@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import { ref, onMounted, watch} from 'vue';
     import { useRoute } from 'vue-router';
-    import { useGames } from '../bb/usegames';
-    import { useNews } from '../bb/usenews';
+    import { useGames } from '../composable/usegames';
+    import { useNews } from '../composable/usenews';
     import { Button } from '@/components/ui/button'
 
     
@@ -43,7 +43,7 @@
             News：
             </div>
 
-            <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
+            <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4 !pb-10">
                 <li v-for="message in news" :key="message.newsId" class=" w-full bg-white/5 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-4 !p-4"">
                     <span class=" ">📢</span>
                     <Button variant="outline" class="uppercase font-bold tracking-wider text-black transition-colors !p-4  !bg-white/20 hover:!bg-white/80 cursor-pointer !mr-2 !ml-2">

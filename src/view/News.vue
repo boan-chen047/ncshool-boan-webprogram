@@ -1,6 +1,6 @@
   <script setup lang="ts">
       import { onMounted } from 'vue';
-      import { useNews } from '../bb/usenews';
+      import { useNews } from '../composable/usenews';
       import { Button } from '@/components/ui/button';
       const { news, fetchNews } = useNews();
 
