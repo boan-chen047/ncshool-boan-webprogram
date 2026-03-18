@@ -1,59 +1,57 @@
-## 遊戲論壇 (Game Forum)
-這是一個使用 Vue 3、Vite 與 Firebase 打造的遊戲論壇專案。專注於資料讀取與 UI 互動體驗，採用 Tailwind CSS 4.0 進行開發。
+## Game Forum
+This is a game forum project built with Vue 3, Vite, and Firebase. It focuses on data fetching and interactive UI experiences, developed using Tailwind CSS 4.0.
 
-### 作品亮點
-  * Vue 3 Composition API：使用 setup 語法與邏輯封裝，提升程式碼重用性。
-  * Firebase 實時整合：
-    * Firestore：實現動態遊戲列表與詳情頁的異步資料抓取。
-    * Authentication：整合 Google 與 Email 登入系統，並動態管理使用者狀態。
-  * 現代化 UI ：
-    * 使用 Shadcn UI (Radix UI) 打造流暢的導覽選單與卡片系統。
-    * 整合 Embla Carousel 實現具備自動播放與懸停暫停功能的遊戲輪播。
+### Project Highlights
+  * **Vue 3 Composition API**: Utilizes the `setup` syntax and logic encapsulation to enhance code reusability.
+  * **Real-time Firebase Integration**:
+    * **Firestore**: Implements asynchronous data fetching for dynamic game lists and detail pages.
+    * **Authentication**: Integrates Google and Email login systems with dynamic user state management.
+  * **Modern UI**:
+    * Uses Shadcn UI (Radix UI) to build a smooth navigation menu and card system.
+    * Integrates Embla Carousel to implement a game carousel featuring autoplay and pause-on-hover functionality.
 
-### 技術
-本專案採用以下技術開發：
-  * 核心框架：Vue 3 (Composition API)
-  * 構建工具：Vite 7
-  * 程式語言：TypeScript
-  * 後端服務：Firebase (Firestore & Authentication)
-  * 樣式處理：Tailwind CSS 4.0
-  * UI 元件庫：Shadcn UI (包含 Carousel, Navigation Menu, Card 等元件)
-  * 外部工具：VueUse, Lucide-Vue-Next
+### Technologies
+This project is developed using the following technologies:
+  * **Core Framework**: Vue 3 (Composition API)
+  * **Build Tool**: Vite 7
+  * **Programming Language**: TypeScript
+  * **Backend Services**: Firebase (Firestore & Authentication)
+  * **Styling**: Tailwind CSS 4.0
+  * **UI Component Library**: Shadcn UI (includes Carousel, Navigation Menu, Card, etc.)
+  * **External Tools**: VueUse, Lucide-Vue-Next
 
-### 專案核心架構
-  * src/Composable/：封裝 Firebase 交互邏輯 (useGames, useAuth)。
-  * src/view/：包含首頁 (home.vue)、詳情頁 (game.vue) 與導覽列 (navbar.vue)。
-  * src/components/ui/：封裝基於 Radix UI 的原子化 UI 元件。
+### Core Architecture
+  * `src/Composable/`: Encapsulates Firebase interaction logic (`useGames`, `useAuth`).
+  * `src/view/`: Contains the Home page (`home.vue`), Detail page (`game.vue`), and Navigation bar (`navbar.vue`).
+  * `src/components/ui/`: Encapsulates atomic UI components based on Radix UI.
   
 ```text
 src/
-├── Composable/      # 邏輯封裝 (Firebase 資料交互)
+├── Composable/      # Logic encapsulation (Firebase data interaction)
 ├── components/
-│   ├── ui/          # 基礎 UI 元件 (Shadcn UI)
-│   └── firebase/    # Firebase 設定檔
-├── view/            # 頁面級組件 (Home, Game Detail, Navbar)
-├── router/          # 路由配置
-└── lib/             # 工具函式 (如 Tailwind 類名合併 cn)
+│   ├── ui/          # Base UI components (Shadcn UI)
+│   └── firebase/    # Firebase configuration
+├── view/            # Page-level components (Home, Game Detail, Navbar)
+├── router/          # Routing configuration
+└── lib/             # Utility functions (e.g., Tailwind class merging with `cn`)
 ```
-
-### 如何在本地運行
-**複製專案:** 
+### Local Setup
+**Clone the repository:** 
 ```bash
 git clone https://github.com/boan-chen047/ncshool-boan-webprogram.git
 ```
 
-**安裝依賴:** 請確保環境符合專案要求的 Node.js 版本（^20.19.0 或 >=22.12.0
+
+**Install dependencies:** Ensure your environment meets the required Node.js version (`^20.19.0` or `>=22.12.0`).
 ```bash
-npm install
+pnpm install
 ```
+**Set environment variables:** Create a `.env` file and fill in your Firebase configuration.
 
-**設定環境變數:** 建立 .env 檔案並填入你的 Firebase 配置。
-
-**啟動開發伺服器:**
-```bash 
-npm run dev
+**Start the development server:**
+```bash
+pnpm dev
 ```
-
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
