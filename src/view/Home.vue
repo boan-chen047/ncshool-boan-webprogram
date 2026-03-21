@@ -24,7 +24,7 @@
 
 <template>
     <main>
-        <div class="text-4xl font-bold mb-6 border-l-8 border-red-400 pl-4 translate-x-35 !mt-4">Popular Games:</div>
+        <div class="text-4xl font-bold mb-6 border-l-8 border-red-400 pl-4 translate-x-35 !mt-4">{{ $t('home.title') }}</div>
         <div class="flex w-full justify-center py-12">
             <Carousel
                 class="w-full max-w-3xl  px-10 !mt-4"
@@ -59,9 +59,7 @@
         </div>
 
         <div class="news w-full max-w-4xl mx-auto !pb-10 ">
-            <div class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4">
-            News：
-            </div>
+            <div class="text-4xl font-bold mb-6 border-l-8 border-yellow-400 pl-4 translate-x-35 !mt-4">{{ $t('home.news') }}</div>
 
             <ul class="flex flex-col  text-cen translate-x-45 w-full !mt-4">
                 <li v-for="message in news" :key="message.newsId" class=" w-full bg-white/5 rounded-xl text-xl hover:bg-white/10 hover:text-yellow-300 transition-all flex items-center !mb-4 !p-4">

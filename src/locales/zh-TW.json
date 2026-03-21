@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "popularGames": "熱門遊戲",
+    "news": "最新消息",
+    "detail":"更多資訊",
+    "login": "登入",
+    "logout": "登出",
+    "switch": "切換語言"
+  },
+  "home": {
+    "title": "熱門遊戲：",
+    "news": "最新消息"
+  }
+}

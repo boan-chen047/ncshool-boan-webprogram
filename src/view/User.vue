@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <template v-if="user" class="!pb-20">
+    <template v-if="user" >
         
         <div class="!px-4 md:basis-1/2 lg:basis-1/3 flex flex-col items-center !mt-12">
             <img :src="user.photoURL || ''" alt="User Avatar" 

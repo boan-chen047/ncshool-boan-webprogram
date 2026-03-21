@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "popularGames": "Popular Games",
+    "news": "News",
+    "detail":"More detail",
+    "login": "Login",
+    "logout": "Logout",
+    "switch": "Switch language"
+  },
+  "home": {
+    "title": "Popular Games:",
+    "news": "News"
+  }
+}
