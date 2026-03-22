@@ -3,7 +3,7 @@
 This is a game forum project built with **Vue 3**, **Vite**, and **Firebase**. 
 It focuses on real-time data fetching, interactive UI experiences, and automated deployment, and is developed using Tailwind CSS 4.0.
 
-👉[View the Website](nschool-d73fc.web.app)
+👉[View the Website](https://nschool-d73fc.web.app)
 
 ## 🚀 Project Highlights
 
@@ -84,3 +84,7 @@ pnpm dev
 - **IDE Recommendation**: [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (Volar).
 - **Type Checking**: This project uses `vue-tsc` for type-checking `.vue` files.
 - **DevTools**: It is highly recommended to install the [Vue.js devtools](https://github.com/vuejs/devtools) for a better debugging experience.
+
+## 👤 Author
+
+**Bo-An Chen (陳柏安)** - [@boan-chen047](https://github.com/boan-chen047)
