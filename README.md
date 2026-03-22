@@ -3,6 +3,7 @@
 This is a game forum project built with **Vue 3**, **Vite**, and **Firebase**. 
 It focuses on real-time data fetching, interactive UI experiences, and automated deployment, and is developed using Tailwind CSS 4.0.
 
+<img width="1895" height="841" alt="螢幕擷取畫面 2026-03-22 134451" src="https://github.com/user-attachments/assets/ed9c2296-1e60-4f14-9f87-ef6514adc620" />
 👉[View the Website](https://nschool-d73fc.web.app)
 
 ## 🚀 Project Highlights
